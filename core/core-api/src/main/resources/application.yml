@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: api
+  profiles:
+    active: local
+  config:
+    import:
+      - db-core.yml
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
